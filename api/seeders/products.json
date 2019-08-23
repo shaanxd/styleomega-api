@@ -1,0 +1,178 @@
+[
+    {
+      "productName": "Adidas Three Stripes",
+      "productDesc": "Classic three-stripes t-shirt from adidas featuring a trefoil logo at the chest. Raglan sleeve silhouette in soft cotton offers ribbed banding at the crew neck + cuffs, complete with three-stripes detailing down both sleeves.",
+      "scaledImg": "https://i.imgur.com/g2GL7G8.jpg",
+      "availableStock": "10",
+      "actualPrice": "44.8",
+      "productDiscount": "10",
+      "newArrival": "false",
+      "productTags":["2","3","7"],
+      "productImages":[
+          "https://i.imgur.com/SV9dnMH.jpg",
+          "https://i.imgur.com/RUrHsxb.jpg",
+          "https://i.imgur.com/xGqEAU3.jpg",
+          "https://i.imgur.com/tI7o0T6.jpg"
+      ]
+    },
+    {
+      "productName": "GUESS Doheny Stripe",
+      "productDesc": "Essential GUESS t-shirt in a perfect stripe pattern, featuring an embroidered logo at the chest. Cut in a standard fit and finished with a ribbed crew neck. GUESS is a truly global lifestyle brand and a symbol of a young, sexy adventurous lifestyle.",
+      "scaledImg": "https://i.imgur.com/sleV2wW.jpg",
+      "availableStock": "20",
+      "actualPrice": "48.2",
+      "productDiscount": "0",
+      "newArrival": "true",
+      "productTags":["2","3","8"],
+      "productImages":[
+          "https://i.imgur.com/S955x0E.jpg",
+          "https://i.imgur.com/GEf5Q4k.jpg",
+          "https://i.imgur.com/w8pE0vW.jpg",
+          "https://i.imgur.com/4L9MZy2.jpg"
+      ]
+    },
+    {
+      "productName": "Patagonia Long Sleeve",
+      "productDesc": "Eco-friendly long sleeve t-shirt from Patagonia featuring graphics at the chest + back. Recycled cotton poly is cut in a standard fit complete with ribbed banding at the crew neck + cuffs.",
+      "scaledImg": "https://i.imgur.com/h7T3AoN.jpg",
+      "availableStock": "20",
+      "actualPrice": "96.3",
+      "productDiscount": "10",
+      "newArrival": "true",
+      "productTags":["2","3"],
+      "productImages":[
+          "https://i.imgur.com/MK4nnmK.jpg",
+          "https://i.imgur.com/DUmgIk3.jpg",
+          "https://i.imgur.com/UPsANAC.jpg",
+          "https://i.imgur.com/NmXZq2M.jpg"
+      ]
+    },
+    {
+      "productName": "Shawn Kemp Crew Neck",
+      "productDesc": "NBA All Stars jersey from Mitchell & Ness featuring Shawn Kemp’s name + numbers. Poly mesh is cut in a short sleeve silhouette in an athletic fit, offering a rib-knit crew neck and patterned ribbed banding at the sleeves. ",
+      "scaledImg": "https://i.imgur.com/azxOJkr.jpg",
+      "availableStock": "20",
+      "actualPrice": "112.5",
+      "productDiscount": "30",
+      "newArrival": "true",
+      "productTags":["2","3"],
+      "productImages":[
+          "https://i.imgur.com/w6G06Cy.jpg",
+          "https://i.imgur.com/Y7YkTpA.jpg",
+          "https://i.imgur.com/SO6Ca2R.jpg",
+          "https://i.imgur.com/HsZ2xJK.jpg"
+      ]
+    },
+    {
+      "productName": "Adidas Collective Memories",
+      "productDesc": "Adidas t-shirt in a bright, retro-inspired print inspired by the adidas 1989 swimwear catalog. Heavyweight cotton jersey is cut in a standard fit, complete with a ribbed crew neck.",
+      "scaledImg": "https://i.imgur.com/eIfm476.jpg",
+      "availableStock": "20",
+      "actualPrice": "38.2",
+      "productDiscount": "20",
+      "newArrival": "true",
+      "productTags":["2","3","7"],
+      "productImages":[
+          "https://i.imgur.com/0tzycdF.jpg",
+          "https://i.imgur.com/NyJLl6l.jpg",
+          "https://i.imgur.com/NVpdwkm.jpg",
+          "https://i.imgur.com/9y6hffb.jpg"
+      ]
+    },
+    {
+      "productName": "Raga Man Shirt",
+      "productDesc": "Wallpaper stripe short sleeve button-down shirt from Raga Man. Breezy soft viscose is cut with a pointed collar, full-length front button closure and a rounded hem. Finished with a patch pocket at the chest.",
+      "scaledImg": "https://i.imgur.com/x9KDYpv.jpg",
+      "availableStock": "20",
+      "actualPrice": "85.0",
+      "productDiscount": "0",
+      "newArrival": "false",
+      "productTags":["2","4"],
+      "productImages":[
+          "https://i.imgur.com/KJs4kAr.jpg",
+          "https://i.imgur.com/Vck4VYX.jpg",
+          "https://i.imgur.com/rcOtjeW.jpg",
+          "https://i.imgur.com/uZQoFCu.jpg"
+      ]
+    },
+    {
+      "productName": "UO Colorblocked Shirt",
+      "productDesc": "Short sleeve button-down shirt from Urban Outfitters in a colorblocked construction. Cut with a camp collar, full-length front button closure and a split hem. Finished with a patch pocket at the chest.",
+      "scaledImg": "https://i.imgur.com/ARFvur1.jpg",
+      "availableStock": "20",
+      "actualPrice": "48.0",
+      "productDiscount": "0",
+      "newArrival": "false",
+      "productTags":["2","4"],
+      "productImages":[
+          "https://i.imgur.com/r6T73gu.jpg",
+          "https://i.imgur.com/jo5tGY6.jpg",
+          "https://i.imgur.com/mu5KVfY.jpg",
+          "https://i.imgur.com/iQVTSXt.jpg"
+      ]
+    },
+    {
+      "productName": "UO Eyelet Shirt",
+      "productDesc": "Embroidered eyelet shirt from Urban Outfitters. Made from a woven fabrication that features all-over embroidered eyelet detailing.",
+      "scaledImg": "https://i.imgur.com/HBvKl40.jpg",
+      "availableStock": "20",
+      "actualPrice": "32.0",
+      "productDiscount": "0",
+      "newArrival": "false",
+      "productTags":["1","5"],
+      "productImages":[
+          "https://i.imgur.com/832nvoB.jpg",
+          "https://i.imgur.com/YYsdbZZ.jpg",
+          "https://i.imgur.com/3ZHbuU6.jpg",
+          "https://i.imgur.com/ZVRTjat.jpg"
+      ]
+    },
+    {
+      "productName": "Future State Tee",
+      "productDesc": "Cotton t-shirt with an iconic tsunami graphic by Japanese artist Katsushika Hokusai at the front, by Future State. Light + drapey with a crew-neck, short sleeves + rolled hems.",
+      "scaledImg": "https://i.imgur.com/TWhAe7A.jpg",
+      "availableStock": "20",
+      "actualPrice": "120.0",
+      "productDiscount": "0",
+      "newArrival": "false",
+      "productTags":["1","5"],
+      "productImages":[
+          "https://i.imgur.com/2Uz67gB.jpg",
+          "https://i.imgur.com/SQQ1X2M.jpg",
+          "https://i.imgur.com/RqSwCWJ.jpg",
+          "https://i.imgur.com/8o2oFrn.jpg"
+      ]
+    },
+    {
+      "productName": "BDG Carpenter Jean",
+      "productDesc": "Striped denim carpenter jean from better-than-basic basics label, BDG. Made from a cotton twill in a high-rise construction that’s relaxed-fit through the hips down through the wide, flared + cropped leg.",
+      "scaledImg": "https://i.imgur.com/vOSJR3Q.jpg",
+      "availableStock": "20",
+      "actualPrice": "45.0",
+      "productDiscount": "0",
+      "newArrival": "false",
+      "productTags":["1","6"],
+      "productImages":[
+          "https://i.imgur.com/qgETPUq.jpg",
+          "https://i.imgur.com/Eju1WI0.jpg",
+          "https://i.imgur.com/s15jZtz.jpg",
+          "https://i.imgur.com/Za7xAO2.jpg"
+      ]
+    },
+    {
+      "productName": "BDG Drawstring Jean",
+      "productDesc": "Maxin’ out relaxin’ all cool in this drawstring jogger jean from BDG. Made from a lightly distressed vintage wash twill in a mid-rise, relaxed-fit construction.",
+      "scaledImg": "https://i.imgur.com/EM9EpCN.jpg",
+      "availableStock": "20",
+      "actualPrice": "82.0",
+      "productDiscount": "0",
+      "newArrival": "false",
+      "productTags":["1","6"],
+      "productImages":[
+          "https://i.imgur.com/WNkWPgO.jpg",
+          "https://i.imgur.com/ShVdeNi.jpg",
+          "https://i.imgur.com/RHkE5u7.jpg",
+          "https://i.imgur.com/szUyygE.jpg"
+      ]
+    }
+  ]
