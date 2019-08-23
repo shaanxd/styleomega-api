@@ -1,8 +1,16 @@
 const Sequelize = require('sequelize');
 
-const connection = new Sequelize("styleomega", "root", "warmachinerox", {
-    host: "localhost",
-    dialect: "mysql",
+const {
+    DB_USERNAME,
+    DB_PASSWORD,
+    DB_NAME,
+    DB_HOST,
+    DB_DIALECT,
+} = process.env;
+
+const connection = new Sequelize(DB_NAME, DB_USERNAME, DB_PASSWORD, {
+    host: DB_HOST,
+    dialect: DB_DIALECT,
     pool: {
         max: 5,
         min: 0,

@@ -20,7 +20,7 @@ exports.login_user = async (req, res, next) => {
                         id: user.id,
                         userEmail: user.userEmail,
                         userName: user.userName,
-                    }, 'secretkey',
+                    }, process.env.JWT_KEY,
                     {
                         expiresIn: '1h',
                     });
