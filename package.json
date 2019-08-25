@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "eval $(cat .env) nodemon"
+    "start": "eval $(cat .env) nodemon",
+    "seed": "eval $(cat .env) node seed"
   },
   "repository": {
     "type": "git",

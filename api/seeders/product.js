@@ -3,7 +3,7 @@ const Product = require('../models/product');
 const User = require('../models/user');
 //  const connection = require('../database/connection');
 
-const seedProductList = async () => {
+module.exports = async () => {
     try {
         await User.sync({force: true});
         await Product.sync({force: true});
@@ -29,5 +29,3 @@ const seedProductList = async () => {
         console.log(err);
     }
 }
-
-seedProductList();
