@@ -1,12 +1,14 @@
 const productList = require('./products');
 const Product = require('../models/product');
 const User = require('../models/user');
+const Cart = require('../models/cart');
 //  const connection = require('../database/connection');
 
 module.exports = async () => {
     try {
         await User.sync({force: true});
         await Product.sync({force: true});
+        await Cart.sync({force: true});
         productList.forEach(async (product) => {
             const imageString = product.productImages.join('-');
             try {
