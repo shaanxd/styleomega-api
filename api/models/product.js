@@ -8,22 +8,37 @@ Product.init({
         type: Sequelize.UUID,
         defaultValue: Sequelize.UUIDV4,
         primaryKey: true,
+        get() {
+            return this.getDataValue('id');
+        }
     },
     productName:  {
         type: Sequelize.STRING,
         allowNull: false,
+        get() {
+            return this.getDataValue('productName');
+        }
     },
     productDesc: {
         type: Sequelize.STRING,
         allowNull:  false,
+        get() {
+            return this.getDataValue('productDesc');
+        }
     },
     scaledImg: {
         type: Sequelize.STRING,
         allowNull: false,
+        get() {
+            return this.getDataValue('scaledImg');
+        }
     },
     availableStock: {
         type: Sequelize.INTEGER,
         allowNull: false,
+        get() {
+            return this.getDataValue('availableStock');
+        }
     },
     actualPrice: {
         type: Sequelize.DOUBLE,
@@ -38,6 +53,9 @@ Product.init({
     },
     productImages: {
         type: Sequelize.STRING(2000),
+        get() {
+            return this.getDataValue('productImages').split('-');
+        },
     },
 }, {
     sequelize: connection,

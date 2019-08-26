@@ -1,9 +1,10 @@
-const expresss = require('express');
+const express = require('express');
 const bodyParser = require('body-parser');
 
 const userRoutes = require('./api/routes/user');
+const productRoutes = require('./api/routes/product');
 
-const app = expresss();
+const app = express();
 
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
@@ -25,6 +26,7 @@ app.use((req, res, next) => {
 });
 
 app.use('/user', userRoutes);
+app.use('/products', productRoutes);
 app.use((req, res, next) => {
     const error = new Error('404 not found');
     error.status = 404;
