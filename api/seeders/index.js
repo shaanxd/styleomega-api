@@ -15,7 +15,8 @@ module.exports = async () => {
         await Product.sync({force: true});
         await Cart.sync({force: true});
         await Review.sync({force:  true});
-        productList.forEach(async (product) => {
+        console.log('===== Adding Items =====');
+        for (const product of productList) {
             const imageString = product.productImages.join('-');
             try {
                 const createdProduct = await Product.create({
@@ -32,8 +33,9 @@ module.exports = async () => {
             } catch (err) {
                 console.log(err);
             }
-        });
-        userList.forEach(async (user) => {
+        };
+        console.log('===== Adding Users =====');
+        for (const user of userList) {
             try {
                 const hashedPassword = await bcrypt.hash(user.userPassword, 10)
                 const createdUser = await User.create({
@@ -45,7 +47,7 @@ module.exports = async () => {
             } catch (err) {
                 console.log(err);
             }
-        })
+        };
     } catch (err) {
         console.log(err);
     }
