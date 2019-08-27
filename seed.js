@@ -1,3 +1,3 @@
-const seeders = require('./api/seeders');
+const seed = require('./api/seeders');
 
-seeders.seed_product_list();
+seed();
