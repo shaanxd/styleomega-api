@@ -1,4 +1,6 @@
+const User = require('../models/user');
 const Product = require('../models/product');
+const Review = require('../models/review');
 
 exports.get_products = async(req, res, next) => {
     try {
@@ -37,6 +39,82 @@ exports.get_product = async(req, res, next) => {
         }
     } catch (err) {
         res.status(500).json({
+            message: err.message,
+        });
+    }
+}
+
+exports.add_review = async(req, res, next) => {
+    const {
+        body: {productId, title, comment, rating},
+        userData: {id: userId}
+    } = req;
+    try {
+        if (productId && title && comment && rating) {
+            const product = await Product.findOne({where: {id: productId}});
+            if (product) {
+                const createdReview = await Review.create({
+                    title,
+                    comment,
+                    rating,
+                    userId,
+                    productId,
+                });
+                const productReviews = await Review.findAll({
+                    where: {productId},
+                    attributes: {exclude: ['userId', 'createdAt', 'productId']},
+                    include: [{
+                        model: User,
+                        as: 'user',
+                        attributes: {exclude: ['userPassword', 'createdAt', 'updatedAt']}
+                    }],
+                });
+                res.status(200).json({
+                    productId,
+                    reviews: productReviews,
+                });
+            } else {
+                res.status(404).json({
+                    message: 'Product not found',
+                })
+            }
+        } else {
+            res.status(400).json({
+                message: 'Insufficient details.'
+            });
+        }
+    } catch (err) {
+        res.status(err.status || 500).json({
+            message: err.message,
+        });
+    }
+}
+
+exports.get_reviews = async(req, res, next) => {
+    const {params: {id}} = req;
+    try {
+        const product = await Product.findOne({where: {id}});
+        if (product) {
+            const productReviews = await Review.findAll({
+                where: {productId: id},
+                attributes: {exclude: ['userId', 'createdAt', 'productId']},
+                include: [{
+                    model: User,
+                    as: 'user',
+                    attributes: {exclude: ['userPassword', 'createdAt', 'updatedAt']}
+                }],
+            });
+            res.status(200).json({
+                productId: id,
+                reviews: productReviews,
+            })
+        } else {
+            res.status(404).json({
+                message: 'Product not found.',
+            });
+        }
+    } catch (err) {
+        res.status(err.status || 500).json({
             message: err.message,
         });
     }

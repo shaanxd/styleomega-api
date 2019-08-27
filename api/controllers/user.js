@@ -22,7 +22,7 @@ exports.login_user = async (req, res, next) => {
                         userName: user.userName,
                     }, process.env.JWT_KEY,
                     {
-                        expiresIn: '1h',
+                        expiresIn: '1d',
                     });
                     res.status(200).json({
                         message: 'Login successful.',
