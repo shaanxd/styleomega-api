@@ -109,3 +109,62 @@ exports.delete_cart = async(req, res, next) => {
         });
     }
 }
+
+exports.update_cart = async(req, res, next) =>{
+    try {
+        const {
+            params: {id},
+            userData: {id: userId},
+            body: {itemQuantity}
+        } = req;
+        if (itemQuantity) {
+            const cartItem = await Cart.findOne({
+                where: {
+                    id,
+                },
+                attributes: {exclude: ['createdAt', 'updatedAt', 'productId']},
+                include: [{
+                    model: Product,
+                    as: 'product',
+                    attributes: {exclude: ['createdAt', 'updatedAt']},
+                }],
+            });
+            if (cartItem) {
+                if (cartItem.userId === userId) {
+                    await cartItem.update({
+                        itemQuantity,
+                        totalPrice: itemQuantity * cartItem.product.actualPrice,
+                    });
+                    const userCart = await Cart.findAll({
+                        where: {
+                            userId,
+                        },
+                        attributes: {exclude: ['createdAt', 'updatedAt', 'userId', 'productId']},
+                        include: [{
+                            model: Product,
+                            as: 'product',
+                            attributes: {exclude: ['createdAt', 'updatedAt']},
+                        }],
+                    });
+                    res.status(200).json(userCart);
+                } else {
+                    res.status(401).json({
+                        message: 'Not authorized to remove cart item.',
+                    });
+                }
+            } else {
+                res.status(404).json({
+                    message: 'Cart item not found',
+                });
+            }
+        } else {
+            res.status(500).json({
+                message: 'Insufficient details to update cart item.',
+            })
+        }
+    } catch (err) {
+        res.status(err.status || 500).json({
+            message: err.message,
+        })
+    }
+}
