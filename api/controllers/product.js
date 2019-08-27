@@ -24,14 +24,27 @@ exports.get_products = async(req, res, next) => {
 exports.get_product = async(req, res, next) => {
     const {params: {id}} = req;
     try {
-        const result = await Product.findOne({
+        const product = await Product.findOne({
             attributes: {exclude: ['createdAt', 'updatedAt']},
             where: {
                 id: id,
             }
         });
-        if (result) {
-            res.status(200).json(result);
+        if (product) {
+            const productReviews = await Review.findAll({
+                limit: 3,
+                where: {productId: id},
+                attributes: {exclude: ['userId', 'createdAt', 'productId']},
+                include: [{
+                    model: User,
+                    as: 'user',
+                    attributes: {exclude: ['userPassword', 'createdAt', 'updatedAt']}
+                }],
+            });
+            res.status(200).json({
+                ...product.toJSON(),
+                reviews: productReviews,
+            });
         } else {
             res.status(404).json({
                 message: 'Product not found',
