@@ -26,9 +26,9 @@ app.use((req, res, next) => {
     next();
 });
 
-app.use('/user', userRoutes);
-app.use('/products', productRoutes);
-app.use('/cart', cartRoutes);
+app.use('/api/user', userRoutes);
+app.use('/api/products', productRoutes);
+app.use('/api/cart', cartRoutes);
 
 app.use((req, res, next) => {
     const error = new Error('404 not found');
