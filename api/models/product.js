@@ -57,6 +57,10 @@ Product.init({
             return this.getDataValue('productImages').split('-');
         },
     },
+    averageRating: {
+        type: Sequelize.FLOAT,
+        defaultValue: 0,
+    },
 }, {
     sequelize: connection,
     modelName: 'product'

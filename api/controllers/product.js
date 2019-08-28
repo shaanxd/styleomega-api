@@ -82,8 +82,17 @@ exports.add_review = async(req, res, next) => {
                         attributes: {exclude: ['userPassword', 'createdAt', 'updatedAt']}
                     }],
                 });
+                let totalRating = 0;
+                for (const review of productReviews) {
+                    totalRating = totalRating + review.rating;
+                };
+                const averageRating = totalRating/productReviews.length;
+                const updatedProduct = await product.update({
+                    averageRating,
+                });
                 res.status(200).json({
                     productId,
+                    averageRating,
                     reviews: productReviews,
                 });
             } else {
@@ -119,6 +128,7 @@ exports.get_reviews = async(req, res, next) => {
             });
             res.status(200).json({
                 productId: id,
+                averageRating: product.averageRating,
                 reviews: productReviews,
             })
         } else {
